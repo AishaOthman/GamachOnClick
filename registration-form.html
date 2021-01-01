@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Registration form</title>
+ </head>
+ <body>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+ <p id="reg">הרשמה</p>
+ <div id="bord">
+ <form >
+ <table id="tab" >
+ <tr>
+   <td>
+   <label for="name"> שם</label>
+</td>
+<td>
+
+<input type="text" id="name"  required>
+</td>
+ </tr>
+ <tr>
+ <td>
+ <label for="dob"> תאריך לידה</label>
+ </td>
+ <td>
+  <select id="mo">
+ <option>חודש</option>
+ <option>ינואר</option>
+ <option>פברואר</option>
+ <option>מרץ</option>
+ <option>אפריל</option>
+ <option>מאי</option>
+ <option>יוני</option>
+ <option>יולי</option>
+ <option>אוגוסט</option>
+ <option>סבטמבר</option>
+ <option>אוקטובר</option>
+ <option>נובמבר</option>
+ <option>דצמבר</option>
+ </select>
+ <select id="mo">
+ <option>יום</option>
+ <option>1</option>
+ <option>2</option>
+ <option>3</option>
+ <option>4</option>
+ <option>5</option>
+ <option>6</option>
+ <option>7</option>
+ <option>8</option>
+ <option>9</option>
+ <option>10</option>
+ <option>11</option>
+ <option>12</option>
+ <option>13</option>
+ <option>14</option>
+ <option>15</option>
+ <option>16</option>
+ <option>17</option>
+ <option>18</option>
+ <option>19</option>
+ <option>20</option>
+ <option>21</option>
+ <option>22</option>
+ <option>23</option>
+ <option>24</option>
+ <option>25</option> 
+ <option>26</option>
+ <option>27</option>
+ <option>28</option>
+ <option>29</option>
+ <option>30</option>
+ <option>31</option>
+ </select>
+ <select id="ye">
+    <option>שנה</option>
+    <option>1998</option>
+    <option>1999</option>
+    <option>2000</option> 
+    <option>2001</option> 
+    <option>2002</option>
+    <option>2003</option>
+    <option>2004</option> 
+    <option>2005</option>
+    <option>2006</option>
+    <option>2007</option>
+    <option>2008</option> 
+    <option>2009</option>
+    <option>2010</option> 
+    <option>2011</option> 
+    <option>2012</option> 
+    <option>2013</option> 
+    <option>2014</option>
+    <option>2015</option> 
+    <option>2016</option>
+    <option>2017</option> 
+ <option>2018</option>
+    <option>2019</option>
+    <option>2020</option>
+    </select>
+ </td>
+ </tr>
+ <tr>
+ 
+ </tr>
+ <tr>
+ <td>
+<label for="cno">מספר טלפון</label>
+ </td>
+ <td>
+ <select id="ph">
+ <!--===============
+ يمكن اضافة الرموز الدولية  في option
+ ===================-->
+<option>050</option> 
+<option>052</option>
+<option>053</option>
+<option>054</option>
+ </select>
+ <input type = "number" id="number" required>
+ </td>
+ </tr>
+ <tr>
+ <td>
+ <label for="email"> דואר אלקטרוני</label>
+ </td>
+ <td>
+ <input type="text" placeholder="example@email.com" id="ema" required>
+ </td>
+ </tr>
+ <tr>
+    </table>
+   <input type="submit" id="sub" value="שלח" onclick="subm()">
+   </form>
+ </div>
+ 
+<style>
+body {
+ background-color:skyblue;
+ font-family: 'Calligraffitti',cursive;
+ font-weight:bold;
+ color:black;
+ font-size:15px;
+}
+#tabs
+{
+ margin-top:50px;
+ margin-left:55px;
+ border-top:5px;
+ width: 350px;
+}
+#nam{
+ width:40px;
+ border-radius:4px;
+}
+#name
+{
+ width:170px;
+ border-radius:4px;
+}
+#number
+{
+ width:160px;
+ border-radius:4px;
+}
+table
+{
+ border-spacing: 10px 20px;
+ background-color:skyblue;
+ margin-left:5px;
+ border:5px;
+ width: 350px;
+}
+#war
+{
+ color:red;
+}
+#sub
+{
+ height:30px;
+ width:140px;
+ font-weight:bold;
+ margin-top:10px;
+ margin-left:100px;
+ border-radius:10px;
+ outline: none;
+ border:none;
+ background-color: #009788;
+}
+#ema,#ph,#mo,#na,#ye,#mo
+{
+ border-radius:4px;
+}
+#reg
+{
+font-size: 30px;
+text-align: center;
+margin-top:60px;
+font-family: 'Playfair Display', serif;
+ -webkit-animation:colorchange 20s infinite alternate; 
+} @-webkit-keyframes colorchange 
+{ 0% { color: red; } 10% { color: blue; } 20% { color:green; } 30% { color: orange; } 40% { color: violet; } 50% { color: indigo; } 60% { color: gold; } 70% { color: yellow; } 80% { color: brown; } 90% { color:white ; } 100% { color: black; } }
+}
+}
+#fol
+{
+ font-size:230px;
+}
+#i1,#i2,#i3
+{
+ height:16px;
+ width:15px;
+ margin-left:17px;
+}
+#autho
+{
+ font-size:20px;
+ margin-left:85px;
+}
+#copys
+{
+ font-size:13px;
+  font-family: 'Playfair Display', serif;
+  font-weight:bold;
+  text-align:center ;
+}
+input{
+ height: 30px;
+}
+#ema{
+ width: 225px;
+}
+</style>
+ </body>
+</html>
