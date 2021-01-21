@@ -132,3 +132,59 @@ textarea.tall-textarea {
   padding: 0;
   margin: 0;
 }
+
+/* Search Overaly */
+.search-overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(215, 215, 215, 0.911);
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(1.3);
+  transition: .33s visibility ease-in-out, .33s opacity ease-in-out, .33s transform ease-in-out;
+  will-change: visibility, transform, opacity;
+}
+
+.search-overlay--visible {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.search-overlay-icon {
+  color: #007bff;
+  font-size: 1.4rem;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.live-search-field {
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+  outline: none;
+  flex: 1;
+  color: #007bff;
+}
+
+.live-search-results {
+  opacity: 0;
+  transition: all .3s ease-out;
+  transform: scale(1.07)
+}
+
+.live-search-results--visible {
+  opacity: 1;
+  transform: scale(1)
+}
+
+.search-overlay-top {
+  background-color: #FFF;
+  /* background-color: rgba(0, 0, 0, .79); */
+}
