@@ -188,3 +188,53 @@ textarea.tall-textarea {
   background-color: #FFF;
   /* background-color: rgba(0, 0, 0, .79); */
 }
+.search-overlay-top .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.search-overlay-bottom {
+  overflow: auto;
+}
+
+.close-live-search {
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: .75;
+  line-height: 1;
+  color: #292929;
+}
+
+@media (min-width: 700px) {
+  .live-search-field {
+    font-size: 2.5rem;
+  }
+
+  .close-live-search {
+    font-size: 3rem;
+  }
+
+  .search-overlay-icon {
+    font-size: 3rem;
+  }
+}
+
+.close-live-search:hover {
+  opacity: 1;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
