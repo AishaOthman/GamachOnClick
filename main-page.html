@@ -1,21 +1,636 @@
-<! DOCTYOE html>
+<!DOCTYPE html>
 <html>
-<head>
-<title> main page </title>
-</head>
-<header class= 'header'> 
-		<!-- <img id='logo' src='logo.jpeg' /> -->
-			<h1 id='name'> gamach on click </h1>
-			<h2 id='quotes'>welcome</h2>
-</header>
 <body>
-<input type="button" value="Login to your Account" onclick="msg()"><br><br>
-<p> Don't have an account yet?  Sign Up for free:</p><br><br>
-<input type="button" value="Sign up today " onclick="msg()"><br><br>
-<p> Looking for something:</p><br><br>
-<input type="button" value="search" onclick="msg()">
+	<head>
 
-</body>
+		<style>
+			.header{
+			 height: 20%;
+			  width: 100%;
 
+			text-align:center;
 
+			}
+			.left_said{
+			text-align:center;
+			}
+			#logo{
+			width:100px;
+			height:100px;
+			}
+			h2,h3{
+			text-align:right;
+			}
+			#institution_type
+			{
+			width: 15%;
+			 height: 30%;
+			float: right;
+			}
+			#select_area{
+			width: 15%; height:15%;
+			float: right;
+			}
+			#select_city{
+			width: 15%;
+			height:15%;
+			float: right;
+			}
+			.choose_div_search{
+			float: right;
+			width: 10%; height:15%;
+			background-color:#44c767;
+				border-radius:28px;
+				border:1px solid #18ab29;
+				display:inline-block;
+				cursor:pointer;
+				color:#ffffff;
+				font-family:Arial;
+				text-align: center;
+				font-size:20px;
+				
+				text-decoration:none;
+				text-shadow:0px 1px 0px #2f6627;
+			}
+
+			legend {
+				
+				 text-align: right;
+				 font-size:70%;
+			}
+			fieldset {
+				float:right;
+				 text-align:left;
+				 font-size:70%;
+				  border: 100;
+				  border-top: 1px solid #DDD;
+				  width: 65%;
+				  height:50%;
+			}
+			p {
+			  float:right;
+			}
+			.login{
+
+			  display: inline-block;
+			  padding: 15px 25px;
+			  font-size: 50%;
+			  cursor: pointer;
+			  margin-left:50px;
+			  text-align: center;
+			  text-decoration: none;
+			  outline: none;
+			  color: #fff;
+			  background-color: #4CAF50;
+			  border: none;
+			  border-radius: 15px;
+			  box-shadow: 0 9px #999;
+			 
+			}
+
+.login:hover {background-color: #3e8e41}
+
+.login:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  
+}
+.log-in{
+padding-left:40px;
+
+}
+			
+
+		</style>
+	</head>
+	<body>
+		<header class='header'>
+				<br>
+				<img id='logo' src='gamach-logo.jpg' />
+				<!--<h1 id='name'> Gamach on Click </h1>-->
+				<h1 id='quotes'>ברוכים הבאים לאתר גמ"ח בקליק </h1>
+			
+				
+		</header>
+			
+		<nav class= 'search'>
+		<br>
+					<h2>  מה אתם מחפשים?</h2>
+				<select name="institution_type" id="institution_type">
+												 
+							<option value="">בחר סוג גמ"ח</option>
+							<option value="אבידות ומציאות" class="gmach">אבידות ומציאות</option>
+							<option value="אביזרים לשמחות" class="gmach">אביזרים לשמחות</option>
+							<option value="ארבעס" class="gmach">ארבעס</option>
+							<option value="ארונות קודש לאבלים" class="gmach">ארונות קודש לאבלים</option>
+							<option value="אמבטיות לתינוקות" class="gmach">אמבטיות לתינוקות</option>
+							<option value="כסאות בטיחות לרכב" class="gmach">כסאות בטיחות לרכב</option>
+							
+						</select>
+						
+						<select name="search_area" id="select_area">
+							<option value="" selected="">אזור</option>
+																															
+							<option value="19">אלעד - פתח תקוה והסביבה </option> 
+						   
+							<option value="18">בני ברק - תל אביב והסביבה </option> 
+						   
+							<option value="12">דרום </option> 
+						   
+							<option value="14">דרום - מועצות איזוריות </option> 
+						   
+							<option value="13">דרום - מועצות מקומיות </option> 
+						   
+							<option value="10">השרון והסביבה </option> 
+						   
+							<option value="21">חיפה והסביבה </option> 
+						   
+							<option value="22">יהודה ושומרון </option> 
+						   
+							<option value="11">ירושלים והסביבה </option> 
+						   
+							<option value="20">מרכז </option> 
+						   
+							<option value="15">צפון </option> 
+						   
+							<option value="17">צפון - מועצות איזוריות </option> 
+						   
+							<option value="16">צפון - מועצות מקומיות </option> 
+		   
+						</select>
+													
+						<select name="search_city" id="select_city">
+						
+							<option value="" selected="">עיר</option>
+																															
+							<option value="155"> </option> 
+						   
+							<option value="114">אבו גוש </option> 
+						   
+							<option value="173">אבו סנאן </option> 
+						   
+							<option value="242">אבן יהודה </option> 
+						   
+							<option value="278">אום אל פחם </option> 
+						   
+							<option value="118">אופקים </option> 
+						   
+							<option value="196">אור יהודה </option> 
+						   
+							<option value="284">אור עקיבא </option> 
+						   
+							<option value="206">אזור </option> 
+						   
+							<option value="119">אילת </option> 
+						   
+							<option value="141">אל קסום </option> 
+						   
+							<option value="243">אליכין </option> 
+						   
+							<option value="209">אלעד </option> 
+						   
+							<option value="224">אלעד </option> 
+						   
+							<option value="301">אפרת </option> 
+						   
+							<option value="120">אשדוד </option> 
+						   
+							<option value="142">אשכול </option> 
+						   
+							<option value="121">אשקלון </option> 
+						   
+							<option value="143">באר טוביה </option> 
+						   
+							<option value="244">באר יעקב </option> 
+						   
+							<option value="122">באר שבע </option> 
+						   
+							<option value="245">בית דגן </option> 
+						   
+							<option value="303">בית הלל </option> 
+						   
+							<option value="172">בית שאן </option> 
+						   
+							<option value="113">בית שמש </option> 
+						   
+							<option value="296">ביתר עילית </option> 
+						   
+							<option value="197">בני ברק </option> 
+						   
+							<option value="246">בני עיש </option> 
+						   
+							<option value="144">בני שמעון </option> 
+						   
+							<option value="285">בנימינה - גבעת עדה </option> 
+						   
+							<option value="286">בסמ"ה </option> 
+						   
+							<option value="261">ברנר </option> 
+						   
+							<option value="198">בת ים </option> 
+						   
+							<option value="304">גבעת וושינגטון </option> 
+						   
+							<option value="321">גבעת זאב </option> 
+						   
+							<option value="210">גבעת שמואל </option> 
+						   
+							<option value="199">גבעתיים </option> 
+						   
+							<option value="247">גדרה </option> 
+						   
+							<option value="262">גדרות </option> 
+						   
+							<option value="183">גולן </option> 
+						   
+							<option value="305">גוש עציון </option> 
+						   
+							<option value="263">גזר </option> 
+						   
+							<option value="248">גן יבנה </option> 
+						   
+							<option value="264">גן רווה </option> 
+						   
+							<option value="217">גני תקווה </option> 
+						   
+							<option value="249">גני תקווה </option> 
+						   
+							<option value="123">דימונה </option> 
+						   
+							<option value="265">דרום השרון </option> 
+						   
+							<option value="184">הגלבוע </option> 
+						   
+							<option value="185">הגליל העליון </option> 
+						   
+							<option value="186">הגליל התחתון </option> 
+						   
+							<option value="1">הוד השרון </option> 
+						   
+							<option value="145">הערבה התיכונה </option> 
+						   
+							<option value="110">הר אדר </option> 
+						   
+							<option value="109">הר גילה </option> 
+						   
+							<option value="96">הרצליה </option> 
+						   
+							<option value="287">זכרון יעקב </option> 
+						   
+							<option value="250">זמר </option> 
+						   
+							<option value="146">חבל אילות </option> 
+						   
+							<option value="266">חבל יבנה </option> 
+						   
+							<option value="267">חבל מודיעין </option> 
+						   
+							<option value="276">חדרה </option> 
+						   
+							<option value="201">חולון </option> 
+						   
+							<option value="147">חוף אשקלון </option> 
+						   
+							<option value="268">חוף השרון </option> 
+						   
+							<option value="129">חורה </option> 
+						   
+							<option value="275">חיפה </option> 
+						   
+							<option value="174">חצור הגלילית </option> 
+						   
+							<option value="288">חריש </option> 
+						   
+							<option value="98">חריש </option> 
+						   
+							<option value="306">חשמונאים </option> 
+						   
+							<option value="162">טבריה </option> 
+						   
+							<option value="225">טייבה </option> 
+						   
+							<option value="221">טירה </option> 
+						   
+							<option value="283">טירת כרמל </option> 
+						   
+							<option value="322">טל שחר </option> 
+						   
+							<option value="117">טלזסטון </option> 
+						   
+							<option value="165">טמרה </option> 
+						   
+							<option value="175">יבנאל </option> 
+						   
+							<option value="226">יבנה </option> 
+						   
+							<option value="212">יהוד - מונוסון </option> 
+						   
+							<option value="148">יואב </option> 
+						   
+							<option value="307">ים המלח </option> 
+						   
+							<option value="176">יסוד המעלה </option> 
+						   
+							<option value="308">יסודות </option> 
+						   
+							<option value="171">יקנעם עילית </option> 
+						   
+							<option value="130">ירוחם </option> 
+						   
+							<option value="107">ירושלים </option> 
+						   
+							<option value="309">ירכא </option> 
+						   
+							<option value="251">כוכב יאיר </option> 
+						   
+							<option value="218">כוכב יאיר צור יגאל </option> 
+						   
+							<option value="131">כסיפה </option> 
+						   
+							<option value="220">כפר ברא </option> 
+						   
+							<option value="252">כפר ברא </option> 
+						   
+							<option value="177">כפר ורדים </option> 
+						   
+							<option value="310">כפר חסידים </option> 
+						   
+							<option value="99">כפר יונה </option> 
+						   
+							<option value="228">כפר יונה </option> 
+						   
+							<option value="100">כפר סבא </option> 
+						   
+							<option value="214">כפר קאסם </option> 
+						   
+							<option value="230">כפר קאסם </option> 
+						   
+							<option value="207">כפר שמריהו </option> 
+						   
+							<option value="178">כפר תבור </option> 
+						   
+							<option value="160">כרמיאל </option> 
+						   
+							<option value="269">לב השרון </option> 
+						   
+							<option value="132">להבים </option> 
+						   
+							<option value="231">לוד </option> 
+						   
+							<option value="149">לכיש </option> 
+						   
+							<option value="133">לקיה </option> 
+						   
+							<option value="187">מבואות החרמון </option> 
+						   
+							<option value="115">מבשרת ציון </option> 
+						   
+							<option value="168">מגדל העמק </option> 
+						   
+							<option value="188">מגידו </option> 
+						   
+							<option value="311">מדבר יהודה </option> 
+						   
+							<option value="232">מודיעין </option> 
+						   
+							<option value="298">מודיעין עילית - ברכפלד </option> 
+						   
+							<option value="297">מודיעין עילית - קרית ספר </option> 
+						   
+							<option value="112">מוצא עילית </option> 
+						   
+							<option value="253">מזכרת בתיה </option> 
+						   
+							<option value="189">מטה אשר </option> 
+						   
+							<option value="179">מטולה </option> 
+						   
+							<option value="312">מטע </option> 
+						   
+							<option value="324">מירון </option> 
+						   
+							<option value="313">מישור אדומים </option> 
+						   
+							<option value="134">מיתר </option> 
+						   
+							<option value="274">מכבין - רעות </option> 
+						   
+							<option value="108">מעלה אדומים </option> 
+						   
+							<option value="190">מעלה יוסף </option> 
+						   
+							<option value="289">מעלה עירון </option> 
+						   
+							<option value="170">מעלות תרשיחא </option> 
+						   
+							<option value="135">מצפה רמון </option> 
+						   
+							<option value="191">מרום הגליל </option> 
+						   
+							<option value="150">מרחבים </option> 
+						   
+							<option value="192">משגב </option> 
+						   
+							<option value="158">נהריה </option> 
+						   
+							<option value="314">נוה דניאל </option> 
+						   
+							<option value="273">נוה מונוסון </option> 
+						   
+							<option value="151">נווה מדבר </option> 
+						   
+							<option value="270">נחל שורק </option> 
+						   
+							<option value="315">ניר בנים </option> 
+						   
+							<option value="233">נס ציונה </option> 
+						   
+							<option value="157">נצרת </option> 
+						   
+							<option value="161">נצרת עילית </option> 
+						   
+							<option value="282">נשר </option> 
+						   
+							<option value="320">נתיבות </option> 
+						   
+							<option value="101">נתניה </option> 
+						   
+							<option value="219">סביון </option> 
+						   
+							<option value="254">סביון </option> 
+						   
+							<option value="167">סחנין </option> 
+						   
+							<option value="102">סלעית </option> 
+						   
+							<option value="136">עומר </option> 
+						   
+							<option value="159">עכו </option> 
+						   
+							<option value="300">עמנואל </option> 
+						   
+							<option value="193">עמק הירדן </option> 
+						   
+							<option value="194">עמק המעיינות </option> 
+						   
+							<option value="271">עמק חפר </option> 
+						   
+							<option value="195">עמק יזרעאל </option> 
+						   
+							<option value="272">עמק לוד </option> 
+						   
+							<option value="290">עספיא </option> 
+						   
+							<option value="163">עפולה </option> 
+						   
+							<option value="124">ערד </option> 
+						   
+							<option value="291">ערערה-בנגב </option> 
+						   
+							<option value="137">ערערה-בנגב </option> 
+						   
+							<option value="292">פוריידיס </option> 
+						   
+							<option value="180">פקיעין </option> 
+						   
+							<option value="293">פרדס חנה - כרכור </option> 
+						   
+							<option value="103">פרדס חנה - כרכור </option> 
+						   
+							<option value="255">פרדסיה </option> 
+						   
+							<option value="208">פתח תקווה </option> 
+						   
+							<option value="111">צור הדסה </option> 
+						   
+							<option value="104">צור יצחק </option> 
+						   
+							<option value="166">צפת </option> 
+						   
+							<option value="256">קדימה - צורן </option> 
+						   
+							<option value="323">קוממיות </option> 
+						   
+							<option value="236">קלנסווה </option> 
+						   
+							<option value="181">קצרין </option> 
+						   
+							<option value="202">קריית אונו </option> 
+						   
+							<option value="277">קריית אתא </option> 
+						   
+							<option value="281">קריית ביאליק </option> 
+						   
+							<option value="125">קריית גת </option> 
+						   
+							<option value="294">קריית טבעון </option> 
+						   
+							<option value="280">קריית ים </option> 
+						   
+							<option value="116">קריית יערים - טלזסטון </option> 
+						   
+							<option value="279">קריית מוצקין </option> 
+						   
+							<option value="126">קריית מלאכי </option> 
+						   
+							<option value="257">קריית עקרון </option> 
+						   
+							<option value="169">קריית שמונה </option> 
+						   
+							<option value="215">ראש העין </option> 
+						   
+							<option value="182">ראש פינה </option> 
+						   
+							<option value="238">ראשון לציון </option> 
+						   
+							<option value="127">רהט </option> 
+						   
+							<option value="239">רחובות </option> 
+						   
+							<option value="295">רכסים </option> 
+						   
+							<option value="240">רמלה </option> 
+						   
+							<option value="203">רמת גן </option> 
+						   
+							<option value="318">רמת הגולן </option> 
+						   
+							<option value="105">רמת השרון </option> 
+						   
+							<option value="138">רמת חובב </option> 
+						   
+							<option value="152">רמת נגב </option> 
+						   
+							<option value="106">רעננה </option> 
+						   
+							<option value="260">רשפון </option> 
+						   
+							<option value="139">שגב - שלום </option> 
+						   
+							<option value="153">שדות נגב </option> 
+						   
+							<option value="128">שדרות </option> 
+						   
+							<option value="258">שוהם </option> 
+						   
+							<option value="154">שער הנגב </option> 
+						   
+							<option value="299">שפיר </option> 
+						   
+							<option value="164">שפרעם </option> 
+						   
+							<option value="205">תל אביב - יפו </option> 
+						   
+							<option value="259">תל מונד </option> 
+						   
+							<option value="140">תל שבע </option> 
+						   
+							<option value="156">תמר </option> 
+						   
+							<option value="319">תעוז </option> 
+		   
+					   </select>
+						   <button type="submit" class="choose_div_search">חפש</button>                                                                                                        
+					
+			</nav>
+			
+			<main > 
+				
+				<section >
+					<br><br><br>
+					<h2>יש לך חשבון ,כנס עכשיו והתחל לנהל לקוחות ופרטים <h2/>
+					
+						<fieldset>
+						
+							<legend><b><i>כניסה<i/><b/> </legend>
+							<br>
+							<label for="uname" class='log-in'><b>Username</b></label>
+							<input type="text" class='log-in' placeholder="הכנס שם משתמש" name="uname" required>
+
+							<label for="psw" class='log-in'><b>Password</b></label>
+							<input type="password" class='log-in' placeholder="הכנס סיסמא" name="psw" required>
+								
+							<button type="submit" class='login'>כניסה »</button><br>
+							
+							<br>
+							 <span class="psw"><a href="#">שכחתי סיסמה</a></span>
+						</fieldset>
+				</section>
+					<aside class ='left_said' >
+							<h1>גמ"ח ויש לך מה לפרסם ? הרשם עכשיו </h1>
+							<br><br><br>
+							<input class='regstrationbtn' type="button"  value="הרשם עכשיו ">
+							<br>
+				
+				
+				</aside>
+				
+				
+				
+			</main>
+	
+		
+	</body>
 </html>
+	
+			
