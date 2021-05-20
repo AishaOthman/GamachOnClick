@@ -1,0 +1,22 @@
+  <%- include('includes/header') %>
+  
+  <div class="container py-md-5 container--narrow">
+
+    <%- include('includes/flash') %>
+
+    <form action="/create-item" method="POST">
+      <div class="form-group">
+        <label for="item-title" class="text-muted mb-1"><small>Title</small></label>
+        <input required name="title" id="item-title" class="form-control form-control-lg form-control-title" type="text" placeholder="" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label for="item-body" class="text-muted mb-1"><small>Body Content</small></label>
+        <textarea required name="body" id="item-body" class="body-content tall-textarea form-control" type="text"></textarea>
+      </div>
+      
+      <button class="btn btn-primary">Save New Item</button>
+    </form>
+  </div>
+  
+  <%- include('includes/footer') %>

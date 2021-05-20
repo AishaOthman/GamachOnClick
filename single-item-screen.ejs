@@ -1,0 +1,30 @@
+  <%- include('includes/header') %>
+  
+  <div class="container py-md-5 container--narrow">
+
+    <%- include('includes/flash') %>
+
+    <div class="d-flex justify-content-between">
+      <h2><%= item.title %></h2>
+	  
+      <% if (item.isVisitorOwner) { %>
+        <span class="pt-2">
+          <a href="/item/<%= item._id %>/edit" class="text-primary mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></a>
+          <form class="delete-item-form d-inline" action="/item/<%= item._id %>/delete" method="POST">
+            <button class="delete-item-button text-danger" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash"></i></button>
+          </form>
+        </span>
+     <% } %>
+    </div>
+      
+    <p class="text-muted small mb-4">
+      <a href="#"><img class="avatar-tiny" src="<%= item.author.avatar %>"></a>
+      Posted by <a href="#"><%= item.author.username %></a> on <%= item.createdDate.getMonth() + 1 %>/<%= item.createdDate.getDate() %>/<%= item.createdDate.getFullYear() %></p>
+
+    <div class="body-content">
+      <%- filterUserHTML(item.body) %>
+    </div>
+
+  </div>
+  
+  <%- include('includes/footer') %>
